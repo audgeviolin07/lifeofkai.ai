@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "lifeofkaiapp",
+    "slug": "lifeofkaiapp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "lifeofkaiapp"
+}
