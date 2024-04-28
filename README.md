@@ -27,8 +27,13 @@ uvicorn main:app --host 127.0.0.1 --reload
 
 
 HOW TO SET THE SERVER UP
+
+
 1. 
 Put this on the computer side
+cd to lifeofkaiapp and then cd to server 
+and run this command 
+"uvicorn main:app --host 0.0.0.0 --port 3000 --reload"
 http://http://0.0.0.0:3000/
 
 2. 
