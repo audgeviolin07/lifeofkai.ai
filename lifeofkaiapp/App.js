@@ -52,9 +52,9 @@ const LaunchScreen = ({ navigation }) => {
     <View style={{ flex: 1 }}>
       <ThreeJSComponent />
       <View style={{ position: "absolute", bottom: 590, left: 0, right: 0, paddingTop: 50 }}>
-        <Text style={{ fontSize: 48, fontWeight: "bold", color: "#ffffff", textAlign: "center" }}>RecycleAi</Text>
+        <Text style={{ fontSize: 48, fontWeight: "bold", color: "#ffffff", textAlign: "center" }}>Life of Kai Ai</Text>
         <View style={{ marginTop: 10 }}>
-          <Text style={{ fontSize: 16, fontWeight: "bold", color: "#ffffff", textAlign: "center" }}>Technology towards a Cleaner Future</Text>
+          <Text style={{ fontSize: 16, fontWeight: "bold", color: "#ffffff", textAlign: "center" }}>We cultivate compassion, educate empathy, and foster kindness</Text>
         </View>
       </View>
       <View style={{ position: "absolute", bottom: 130, left: 0, right: 0, paddingBottom: 20 }}>
