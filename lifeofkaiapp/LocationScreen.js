@@ -16,7 +16,7 @@ export default function App() {
  const [endLocation, setEndLocation] = useState('');
  const navigation = useNavigation();
 
- Location.setGoogleApiKey("AIzaSyD5GUOMMrDY5Ml8JOQ5j7z7p9f8GaGCDBg");
+ Location.setGoogleApiKey("");
 
 
  useEffect(() => { 
