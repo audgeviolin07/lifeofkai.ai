@@ -128,7 +128,7 @@
 // }
 // });
 
-import { Image, View, TouchableOpacity } from 'react-native';
+import { Image, View, TouchableOpacity, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
@@ -148,7 +148,7 @@ export default function App() {
  const navigation = useNavigation();
 
  const handleButtonPress = () => {
-  navigation.navigate("Meetup"); 
+  navigation.navigate("Pin"); 
 };
 
  Location.setGoogleApiKey("AIzaSyDWlGmB5Wy5P33OM7IMxMXApfUdLoqxN_M");
@@ -239,7 +239,7 @@ export default function App() {
     
      <StatusBar style="auto" /> */}
       <TouchableOpacity onPress={handleButtonPress} style={{ backgroundColor: "#79a8b4", padding: 15, borderRadius: 5, alignSelf: "center" }}>
-          {/* <Text style={{ fontSize: 18, fontWeight: "bold" }}>Pin it</Text> */}
+      <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Pin</Text>
         </TouchableOpacity>
    </View>
  );
