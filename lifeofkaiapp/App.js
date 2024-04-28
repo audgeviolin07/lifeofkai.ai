@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./HomeScreen";
 import * as Location from 'expo-location';
 import LocationScreen from "./LocationScreen";
+import MeetupMap from "./meetupMap";
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,7 @@ const Launchpage = () => {
           <Stack.Screen name="Welcome Page" component={LaunchScreen} options={{ headerShown: false }} />
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Location" component={LocationScreen} />
+          <Stack.Screen name="Meetup" component={MeetupMap} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
