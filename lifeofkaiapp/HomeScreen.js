@@ -7,8 +7,7 @@ import * as MediaLibrary from 'expo-media-library';
 import { MaterialIcons } from '@expo/vector-icons';
 import Button from './src/components/Button';
 import * as Location from 'expo-location';
-
-
+import { useNavigation } from '@react-navigation/native';
 
 export default function App() {
   const [hasCameraPermission, setHasCameraPermission] = useState(null);
@@ -16,17 +15,19 @@ export default function App() {
   const [type, setType] = useState(Camera.Constants.Type.back);
   const [flash, setFlash] = useState(Camera.Constants.FlashMode.off);
   const cameraRef = useRef(null);
+  const navigation = useNavigation();
+
   const handleButtonPress = () => {
     navigation.navigate("Location"); 
   };
 
   const logMessage = async (message) => {
-    // let {
-    //   coords: {
-    //     latitude,
-    //     longitude,
-    //   } 
-    // } = await Location.getCurrentPositionAsync({});
+    let {
+      coords: {
+        latitude,
+        longitude,
+      } 
+    } = await Location.getCurrentPositionAsync({});
     fetch('http://172.20.10.3:3000', {
       method: 'POST',
       headers: {

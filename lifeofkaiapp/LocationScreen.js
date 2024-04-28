@@ -16,7 +16,7 @@ export default function App() {
  const [endLocation, setEndLocation] = useState('');
  const navigation = useNavigation();
 
- Location.setGoogleApiKey("");
+ Location.setGoogleApiKey("AIzaSyDWlGmB5Wy5P33OM7IMxMXApfUdLoqxN_M");
 
 
  useEffect(() => { 
@@ -66,11 +66,11 @@ export default function App() {
     style={styles.inputTextbox}
     />
 
-     <Image
+     {/* <Image
           source={geoBack}
           style={{ width: '100%', height: '175%', position: 'absolute', top: -100, left: 0, bottom: 0, right: 0, zIndex: -1 }}
 
-        />
+        /> */}
         
     
      <TextInput placeholder='WHERE AND WHERE ARE YOU GOING?' value={address} onChangeText={setAddress} style={styles.text}/>
@@ -78,7 +78,7 @@ export default function App() {
      <Button title="Send Location" onPress={reverseGeocode} style={{ zIndex: 2 }}
      />
 
-    
+{/*     
       <Image
           source={requestButton}
           style={{ width: '100%', height: '45%', position: 'absolute', top: 148, zIndex: -1 }}
@@ -87,8 +87,8 @@ export default function App() {
       <Image
           source={requestBubble}
           style={{ width: '75%', height: '27%', position: 'absolute', top: 415, zIndex: -1 }}
-        />
-        <TouchableOpacity onPress={() => navigation.navigate('Other Profile')}>
+        /> */}
+        {/* <TouchableOpacity onPress={() => navigation.navigate('Other Profile')}>
         <Image
           source={yes}
           style={{ width: 100, height: 100, position: 'absolute', right: 20, top: 100, zIndex: -1 }}
@@ -102,7 +102,7 @@ export default function App() {
         />
       </TouchableOpacity>
     
-     <StatusBar style="auto" />
+     <StatusBar style="auto" /> */}
    </View>
  );
 }
