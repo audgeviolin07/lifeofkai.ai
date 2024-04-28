@@ -40,24 +40,57 @@ const LaunchScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={{ flex: 1, justifyContent:"space-evenly", flexDirection: "column", backgroundColor: '#8ccad8' }}>
+    <View style={{ flex: 0, justifyContent:"space-evenly", flexDirection: "column", backgroundColor: '#6a8e9e' }}>
+      
+      
+      <Image
+          style={{width: 400, height: 50}}
+          // source={require('./hackdavis.png')} // Specify the path to your image
+        />
       <View>
         <Image
           style={{marginLeft: 40, width: 300, height: 100}}
           source={{ uri: "https://images.squarespace-cdn.com/content/v1/607de9646bc6784e77578398/ee3bb302-50dd-4706-9bbe-e43b65ac01d4/LifeOfKaiLogo.png" }}
         />
-        <Text style={{ padding: 12, fontSize: 16, fontWeight: "bold", color: "#ffffff", textAlign: "center" }}>
+        <Text style={{ padding: 60, fontSize: 16, fontWeight: "bold", color: "#ffffff", textAlign: "center" }}>
           We cultivate compassion, educate empathy, and foster kindness
         </Text>
       </View>
-      <View style={{paddingBottom: 250}}>
-        <TouchableOpacity onPress={handleButtonPress} style={{ backgroundColor: "#00C5A8", padding: 15, borderRadius: 5, alignSelf: "center" }}>
+      <View style={{}}>
+        <TouchableOpacity onPress={handleButtonPress} style={{ backgroundColor: "#79a8b4", padding: 15, borderRadius: 5, alignSelf: "center" }}>
           <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Report A Lost Pet</Text>
         </TouchableOpacity>
         <Text style={{ color: "white", fontSize: 20, fontWeight: "bold", marginTop: 10, textAlign: "center" }}>
           Click the button to report a lost pet!
         </Text>
+        <Text style={{ color: "white", fontSize: 20, fontWeight: "bold", marginTop: 10, textAlign: "center" }}>
+         
+        </Text>
       </View>
+      <View style={{padding: 10, flexDirection: 'row', justifyContent: 'space-around' }}>
+        <Image
+          style={{ marginLeft: 20, width: 150, height: 120,  marginRight: 20 }}
+          source={require('./quinn.png')} // Specify the path to your image
+        />
+        <Image
+          style={{ marginLeft: 20, width: 150, height: 120,  marginRight: 20 }}
+          source={require('./snowyanddusty.png')} // Specify the path to your image
+        />
+       </View>
+      <View style={{ padding: 30, flexDirection: 'row', justifyContent: 'space-around' }}>
+        <Image
+          style={{ marginLeft: 20, width: 150, height: 120,  marginRight: 20 }}
+          source={require('./yolo.png')} // Specify the path to your image
+        />
+        <Image
+          style={{ marginLeft: 20, width: 150, height: 120,  marginRight: 20 }}
+          source={require('./mama.png')} // Specify the path to your image
+        />
+       
+    </View>
+    <Text style={{ color: "white", fontSize: 20, fontWeight: "bold", marginTop: 10, textAlign: "center" }}>
+         
+        </Text>
     </View>
   );
 };
