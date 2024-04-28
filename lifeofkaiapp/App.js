@@ -1,26 +1,3 @@
-// import { StatusBar } from 'expo-status-bar';
-// import React from 'react';
-// import { StyleSheet, Text, View } from 'react-native';
-
-// export default function App() {
-//   return (
-//     <View style={styles.container}>
-//       <Text>fuck it we ball!</Text>
-//       <StatusBar style="auto" />
-//     </View>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
-
-//imported open source
 import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, SafeAreaView, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
