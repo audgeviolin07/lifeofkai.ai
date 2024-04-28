@@ -22,15 +22,15 @@
 
 //imported open source
 import React from "react";
-import { View, Text, TouchableOpacity, SafeAreaView } from "react-native";
+import { View, Text, TouchableOpacity, SafeAreaView, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./HomeScreen";
-import ThreeJSComponent from "./ThreeJSComponent";
 
 const Stack = createStackNavigator();
 
 const Launchpage = () => {
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <NavigationContainer>
@@ -49,25 +49,25 @@ const LaunchScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#8ccad8' }}>
-    {/* <ThreeJSComponent /> */}
-    <View style={{ position: "absolute", bottom: 590, left: 0, right: 0, paddingTop: 50 }}>
-      <Text style={{ fontSize: 32, fontWeight: "bold", color: "#ffffff", textAlign: "center" }}>Life of Kai Ai</Text>
-      <View style={{ marginTop: 10, alignSelf: 'center', paddingHorizontal: 30 }}>
-  <Text style={{ fontSize: 16, fontWeight: "bold", color: "#ffffff", textAlign: "center" }}>
-    We cultivate compassion, educate empathy, and foster kindness
-  </Text>
-</View>
+    <View style={{ flex: 1, justifyContent:"space-evenly", flexDirection: "column", backgroundColor: '#8ccad8' }}>
+      <View>
+        <Image
+          style={{marginLeft: 40, width: 300, height: 100}}
+          source={{ uri: "https://images.squarespace-cdn.com/content/v1/607de9646bc6784e77578398/ee3bb302-50dd-4706-9bbe-e43b65ac01d4/LifeOfKaiLogo.png" }}
+        />
+        <Text style={{ padding: 12, fontSize: 16, fontWeight: "bold", color: "#ffffff", textAlign: "center" }}>
+          We cultivate compassion, educate empathy, and foster kindness
+        </Text>
+      </View>
+      <View style={{paddingBottom: 250}}>
+        <TouchableOpacity onPress={handleButtonPress} style={{ backgroundColor: "#00C5A8", padding: 15, borderRadius: 5, alignSelf: "center" }}>
+          <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Report A Lost Pet</Text>
+        </TouchableOpacity>
+        <Text style={{ color: "white", fontSize: 20, fontWeight: "bold", marginTop: 10, textAlign: "center" }}>
+          Click the button to report a lost pet!
+        </Text>
+      </View>
     </View>
-    <View style={{ position: "absolute", bottom: 130, left: 0, right: 0, paddingBottom: 20 }}>
-      <TouchableOpacity onPress={handleButtonPress} style={{ backgroundColor: "#00C5A8", padding: 15, borderRadius: 5, alignSelf: "center" }}>
-        <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>Get Started</Text>
-      </TouchableOpacity>
-      <Text style={{ color: "white", fontSize: 20, fontWeight: "bold", marginTop: 10, textAlign: "center" }}>
-        Click the button to get started!
-      </Text>
-    </View>
-  </View>
   );
 };
 
