@@ -207,6 +207,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import Button from './src/components/Button';
 import * as Location from 'expo-location';
 
+
 export default function App() {
   const [hasCameraPermission, setHasCameraPermission] = useState(null);
   const [image, setImage] = useState(null);
