@@ -194,3 +194,5 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+
+// trying to solve assest id must be a string 
