@@ -52,21 +52,6 @@ const LaunchScreen = ({ navigation }) => {
             Report A Lost Pet
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate("Image Picker");
-          }}
-          style={{
-            backgroundColor: "#00C5A8",
-            padding: 15,
-            borderRadius: 5,
-            alignSelf: "center",
-          }}
-        >
-          <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }}>
-            Upload Your Own Photo
-          </Text>
-        </TouchableOpacity>
         <Text
           style={{
             color: "white",

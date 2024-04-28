@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Text, View, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { Camera, CameraType } from "expo-camera";
+import { useState, useRef, useEffect } from "react";
 import * as MediaLibrary from "expo-media-library";
 import Button from "./Button.jsx";
 import * as Location from "expo-location";
 import { uploadImageAsync } from "../utils/index.js";
+import { StyleSheet, View, Image } from "react-native";
 
-const Report = () => {
+const Report = ({ navigation }) => {
   const [hasCameraPermission, setHasCameraPermission] = useState(null);
   const [image, setImage] = useState(null);
   const [type, setType] = useState(Camera.Constants.Type.back);
@@ -52,8 +52,8 @@ const Report = () => {
     if (cameraRef.current) {
       try {
         const photo = await cameraRef.current.takePictureAsync();
-        console.log(photo.uri); // Log the URI for testing purposes
         await uploadImageAsync(photo.uri);
+        setImage(photo.uri);
       } catch (error) {
         console.log("Error taking picture:", error);
       }
@@ -63,13 +63,12 @@ const Report = () => {
   const savePicture = async () => {
     if (image) {
       try {
-        const asset = await MediaLibrary.saveToLibraryAsync(image);
-        const assetInfo = await MediaLibrary.getAssetInfoAsync(asset);
-        const imagePath = assetInfo.localUri;
-        alert("Picture saved! 🎉");
+        // const asset = await MediaLibrary.saveToLibraryAsync(image);
+        // const assetInfo = await MediaLibrary.getAssetInfoAsync(asset);
+        // const imagePath = assetInfo.localUri;
+        // alert("Picture saved! 🎉");
         setImage(null);
-        console.log("saved successfully");
-        console.log("Image path:", imagePath["uri"]);
+        navigation.navigate("Location");
       } catch (error) {
         console.log(error);
       }
@@ -137,6 +136,12 @@ const Report = () => {
               icon="retweet"
             />
             <Button title="Save" onPress={savePicture} icon="check" />
+            <Button
+              title=""
+              onPress={() => {
+                navigation.navigate("Location");
+              }}
+            />
           </View>
         ) : (
           <Button title="Take a picture" onPress={takePicture} icon="camera" />
